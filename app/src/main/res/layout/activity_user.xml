@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uz.samtuit.realmbindingrecycle.activities.UserActivity">
+    <data>
+        <variable name="user" type="uz.samtuit.realmbindingrecycle.models.User" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="firstName"
+            android:text="@={user.firstName}"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="lastName"
+            android:text="@={user.lastName}"/>
+
+    </LinearLayout>
+</layout>

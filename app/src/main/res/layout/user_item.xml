@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <data>
+        <variable name="user" type="uz.samtuit.realmbindingrecycle.models.User" />
+    </data>
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:longClickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="firstName"
+                android:text="@{user.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="lastName"
+                android:text="@{user.lastName}" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>
