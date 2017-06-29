@@ -31,12 +31,9 @@ public class UserActivity extends AppCompatActivity {
 
         if (id == null) {
             user = new User();
-            System.out.println("create");
         }
-        else
-        {
+        else {
             user = realm.where(User.class).equalTo("id", id).findFirst();
-            System.out.println("user"+user);
         }
         binding.setUser(user);
         realm.beginTransaction();
